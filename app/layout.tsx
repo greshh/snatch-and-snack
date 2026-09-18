@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Luxurious_Script, Libre_Baskerville } from "next/font/google";
 import "./globals.css";
-import Footer from "./footer";
 
 const luxuriousScript = Luxurious_Script({
   variable: "--font-luxurious-script",
@@ -27,6 +26,14 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       lang="en"
       className={`${luxuriousScript.variable} ${libreBaskerville.variable} h-full antialiased`}
     >
+      <head>
+        <link
+          rel="icon"
+          href="/icon.png"
+          type="image/icon.png"
+          sizes="icon.png"
+        />
+      </head>
       <body>
         {children}
       </body>
